@@ -39,7 +39,7 @@
         //Tipo de auth de usuarios, en este caso de Google
         const provider = new  firebase.auth.GoogleAuthProvider();
         //Configura el provedor seleccionado (Google) para ser seleccionadod e una lista
-        p.setCustomParameters({ prompt: "select_account" });
+        provider.setCustomParameters({ prompt: "select_account" });
         auth.onAuthStateChanged(
             usuarioAuth =>{
                 if(usuarioAuth && usuarioAuth.email){
